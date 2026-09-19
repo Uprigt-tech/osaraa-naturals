@@ -1,0 +1,67 @@
+:root {
+  /* Colors */
+  --color-primary-dark: #1F3F2F; /* Deep forest green */
+  --color-primary: #2B5741; /* Dark botanical green */
+  --color-accent-gold: #C69C6D; /* Muted turmeric/golden yellow */
+  --color-accent-light: #DFBC93; /* Lighter gold for hover/accents */
+  
+  --color-bg-light: #F9F7F2; /* Warm cream */
+  --color-bg-ivory: #FDFDFB; /* Soft ivory */
+  --color-bg-dark: #2B2A29; /* Charcoal */
+  --color-earth-brown: #5D4A3D; /* Earth brown */
+  
+  --color-text-main: #2A2E2C; /* Dark text for readability */
+  --color-text-muted: #6B726F;
+  --color-text-light: #F9F7F2;
+  
+  --color-border: #E8E5DF;
+  --color-border-dark: #C2C0BA;
+  
+  --color-success: #357A55;
+  --color-error: #B74B4B;
+
+  /* Typography */
+  --font-heading: 'Playfair Display', serif; /* Heritage, premium */
+  --font-body: 'Inter', sans-serif; /* Clean, modern, readable */
+  
+  /* Font Sizes */
+  --text-xs: 0.75rem;   /* 12px */
+  --text-sm: 0.875rem;  /* 14px */
+  --text-base: 1rem;    /* 16px */
+  --text-md: 1.125rem;  /* 18px */
+  --text-lg: 1.25rem;   /* 20px */
+  --text-xl: 1.5rem;    /* 24px */
+  --text-2xl: 2rem;     /* 32px */
+  --text-3xl: 2.5rem;   /* 40px */
+  --text-4xl: 3rem;     /* 48px */
+
+  /* Spacing */
+  --space-1: 0.25rem;   /* 4px */
+  --space-2: 0.5rem;    /* 8px */
+  --space-3: 0.75rem;   /* 12px */
+  --space-4: 1rem;      /* 16px */
+  --space-6: 1.5rem;    /* 24px */
+  --space-8: 2rem;      /* 32px */
+  --space-12: 3rem;     /* 48px */
+  --space-16: 4rem;     /* 64px */
+  --space-24: 6rem;     /* 96px */
+
+  /* Borders & Radius */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-pill: 9999px;
+
+  /* Shadows (Subtle, premium) */
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.05);
+  --shadow-lg: 0 10px 24px rgba(43, 87, 65, 0.08); /* Slight green tint */
+
+  /* Transitions */
+  --transition-fast: 150ms ease;
+  --transition-normal: 250ms ease;
+
+  /* Layout Containers */
+  --container-max-width: 1200px;
+  --header-height: 70px;
+}

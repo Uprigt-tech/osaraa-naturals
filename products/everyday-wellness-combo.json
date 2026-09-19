@@ -1,0 +1,39 @@
+{
+  "id": "everyday-wellness-combo",
+  "slug": "everyday-wellness-combo",
+  "name": "Everyday Wellness Combo",
+  "category": "Combos",
+  "type": "combo",
+  "shortDescription": "The perfect starting point for natural living. Includes our signature Health Mix and Shikakai Powder.",
+  "description": "Experience the core of OSAARA NATURALS with our Everyday Wellness Combo. This curated package brings you traditional nutrition for your body and natural care for your hair, all in one convenient bundle.",
+  "images": [
+    "/assets/products/wellness-combo.png"
+  ],
+  "includes": [
+    "traditional-health-mix",
+    "shikakai-herbal-powder"
+  ],
+  "ingredients": [],
+  "benefits": [
+    "Complete inside-out wellness",
+    "Great value compared to individual purchases",
+    "Perfect for gifting or starting a natural lifestyle"
+  ],
+  "howToUse": [],
+  "suitableFor": [
+    "Families"
+  ],
+  "manufacturingMethod": "",
+  "shelfLife": "Refer to individual products",
+  "storageInstructions": "",
+  "availability": true,
+  "featured": true,
+  "variants": [
+    {
+      "weight": "Standard (Health Mix 500g + Shikakai 250g)",
+      "price": 599,
+      "mrp": 849,
+      "available": true
+    }
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "id": "shikakai-herbal-powder",
+  "slug": "shikakai-herbal-powder",
+  "name": "Traditional Shikakai Herbal Powder",
+  "category": "Hair Care",
+  "type": "single",
+  "shortDescription": "A time-tested herbal blend for naturally strong, clean, and lustrous hair.",
+  "description": "Inspired by generations of natural hair care, our Shikakai Herbal Powder is a complete traditional solution for hair wash. Made with locally sourced shikakai, amla, reetha, and a blend of restorative herbs, it cleanses the scalp gently without stripping natural oils.",
+  "images": [
+    "/assets/products/haircare.png"
+  ],
+  "ingredients": [
+    "Shikakai",
+    "Amla",
+    "Reetha (Soapnut)",
+    "Hibiscus Leaves",
+    "Fenugreek"
+  ],
+  "benefits": [
+    "Cleanses scalp naturally",
+    "Promotes healthy hair growth",
+    "Prevents dandruff and flakiness",
+    "Leaves hair soft and manageable"
+  ],
+  "howToUse": [
+    "Mix the required amount of powder with water to form a paste.",
+    "Apply evenly on wet hair and scalp.",
+    "Massage gently and rinse thoroughly."
+  ],
+  "suitableFor": [
+    "All hair types"
+  ],
+  "manufacturingMethod": "Sun-dried and traditionally stone-ground",
+  "shelfLife": "12 months from packing",
+  "storageInstructions": "Store in a cool, dry place in an airtight container.",
+  "availability": true,
+  "featured": true,
+  "variants": [
+    {
+      "weight": "100g",
+      "price": 149,
+      "mrp": 199,
+      "available": true
+    },
+    {
+      "weight": "250g",
+      "price": 299,
+      "mrp": 399,
+      "available": true
+    },
+    {
+      "weight": "500g",
+      "price": 549,
+      "mrp": 750,
+      "available": true
+    }
+  ]
+}

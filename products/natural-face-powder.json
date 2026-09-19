@@ -1,0 +1,53 @@
+{
+  "id": "natural-face-powder",
+  "slug": "natural-face-powder",
+  "name": "Traditional Herbal Face & Skin Care Powder",
+  "category": "Face & Skin Care",
+  "type": "single",
+  "shortDescription": "A natural everyday bath powder for glowing, healthy skin, inspired by traditional beauty rituals.",
+  "description": "Crafted from a blend of wild turmeric, green gram, and aromatic herbs, our Herbal Face & Skin Care Powder acts as a gentle exfoliant and natural cleanser. Regular use helps maintain an even skin tone, reduces blemishes, and leaves the skin feeling fresh and radiant.",
+  "images": [
+    "/assets/products/skincare.png"
+  ],
+  "ingredients": [
+    "Green Gram (Moong Dal)",
+    "Wild Turmeric (Kasturi Manjal)",
+    "Vetiver",
+    "Rose Petals",
+    "Neem Leaves"
+  ],
+  "benefits": [
+    "Gently exfoliates dead skin cells",
+    "Improves natural glow",
+    "Reduces tan and blemishes",
+    "Soothes and cools the skin"
+  ],
+  "howToUse": [
+    "Mix required amount with water or rose water to make a smooth paste.",
+    "Apply evenly over face and body.",
+    "Gently scrub and wash off with normal water."
+  ],
+  "suitableFor": [
+    "All skin types",
+    "Men and Women"
+  ],
+  "manufacturingMethod": "Sun-dried natural ingredients, finely milled",
+  "shelfLife": "12 months from packing",
+  "storageInstructions": "Keep tightly sealed in a dry place to prevent moisture absorption.",
+  "availability": true,
+  "featured": false,
+  "variants": [
+    {
+      "weight": "100g",
+      "price": 129,
+      "mrp": 160,
+      "available": true
+    },
+    {
+      "weight": "250g",
+      "price": 279,
+      "mrp": 350,
+      "available": true
+    }
+  ]
+}

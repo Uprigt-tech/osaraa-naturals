@@ -1,0 +1,62 @@
+{
+  "id": "traditional-health-mix",
+  "slug": "traditional-health-mix",
+  "name": "Traditional Millet Health Mix (Sathu Maavu)",
+  "category": "Health & Nutrition",
+  "type": "single",
+  "shortDescription": "A wholesome traditional blend of sprouted millets, pulses, and nuts for everyday family nutrition.",
+  "description": "Rooted in rural heritage, our Traditional Health Mix is crafted from a multigrain recipe passed down through generations. Carefully roasted and ground, this mix provides natural energy and essential nutrients, making it a perfect morning drink for all age groups.",
+  "images": [
+    "/assets/products/healthmix.png"
+  ],
+  "ingredients": [
+    "Pearl Millet (Kambu)",
+    "Finger Millet (Ragi)",
+    "Foxtail Millet",
+    "Green Gram",
+    "Almonds",
+    "Cashews",
+    "Cardamom"
+  ],
+  "benefits": [
+    "Rich in dietary fiber and protein",
+    "Provides sustained energy",
+    "Easily digestible",
+    "No added refined sugars or preservatives"
+  ],
+  "howToUse": [
+    "Mix 2 tablespoons of health mix in 1 cup of water or milk without lumps.",
+    "Cook on medium flame for 3-5 minutes, stirring continuously.",
+    "Add jaggery or natural sweetener to taste."
+  ],
+  "suitableFor": [
+    "Children (above 2 years)",
+    "Adults",
+    "Elders"
+  ],
+  "manufacturingMethod": "Dry roasted in traditional cast iron and finely ground",
+  "shelfLife": "6 months from packing",
+  "storageInstructions": "Store in an airtight container away from moisture.",
+  "availability": true,
+  "featured": true,
+  "variants": [
+    {
+      "weight": "250g",
+      "price": 199,
+      "mrp": 250,
+      "available": true
+    },
+    {
+      "weight": "500g",
+      "price": 379,
+      "mrp": 450,
+      "available": true
+    },
+    {
+      "weight": "1000g",
+      "price": 699,
+      "mrp": 850,
+      "available": true
+    }
+  ]
+}

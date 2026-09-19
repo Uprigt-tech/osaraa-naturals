@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OSAARA NATURALS | Natural Products. Traditional Goodness.</title>
+  <meta name="description"
+    content="Discover OSAARA NATURALS. Traditional natural products inspired by generations of knowledge, locally sourced ingredients, and time-tested preparation methods.">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&display=swap"
+    rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/animations.css">
+
+  <style>
+    /* Homepage Specific Styles */
+    .hero {
+      position: relative;
+      background-color: var(--color-bg-ivory);
+      overflow: hidden;
+      padding: var(--space-12) 0;
+      border-bottom: 1px solid var(--color-border);
+    }
+
+    .hero-container {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: var(--space-8);
+      align-items: center;
+    }
+
+    @media (min-width: 768px) {
+      .hero {
+        padding: var(--space-24) 0;
+      }
+
+      .hero-container {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    .hero-content h1 {
+      font-size: var(--text-3xl);
+      margin-bottom: var(--space-4);
+    }
+
+    @media (min-width: 1024px) {
+      .hero-content h1 {
+        font-size: var(--text-4xl);
+      }
+    }
+
+    .hero-content p {
+      font-size: var(--text-lg);
+      color: var(--color-text-muted);
+      margin-bottom: var(--space-8);
+      max-width: 500px;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-4);
+    }
+
+    @media (min-width: 480px) {
+      .hero-actions {
+        flex-direction: row;
+      }
+    }
+
+    .hero-image {
+      position: relative;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      aspect-ratio: 4/5;
+      background-color: var(--color-earth-brown);
+    }
+
+    .hero-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.9;
+    }
+
+    /* Section Headers */
+    .section-header {
+      text-align: center;
+      margin-bottom: var(--space-12);
+    }
+
+    .section-header h2 {
+      font-size: var(--text-2xl);
+      margin-bottom: var(--space-2);
+    }
+
+    .section-header p {
+      color: var(--color-text-muted);
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    /* Categories */
+    .category-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: var(--space-6);
+    }
+
+    @media (min-width: 768px) {
+      .category-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    .category-card {
+      background: var(--color-bg-ivory);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-sm);
+      display: flex;
+      align-items: center;
+      padding: var(--space-4);
+      text-decoration: none;
+      color: var(--color-text-main);
+      transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+    }
+
+    .category-card:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-sm);
+      border-color: var(--color-primary-dark);
+    }
+
+    .category-card img {
+      width: 80px;
+      height: 80px;
+      object-fit: cover;
+      border-radius: var(--radius-sm);
+      margin-right: var(--space-4);
+    }
+
+    .category-card-content {
+      flex-grow: 1;
+    }
+
+    .category-card h3 {
+      color: var(--color-primary-dark);
+      font-size: var(--text-lg);
+      margin-bottom: var(--space-1);
+    }
+
+    .category-card p {
+      margin-bottom: 0;
+      font-size: var(--text-sm);
+      color: var(--color-text-muted);
+    }
+
+    .category-card .arrow {
+      color: var(--color-primary);
+      font-size: 1.25rem;
+    }
+
+    /* Product Grid */
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      /* 2 columns on mobile */
+      gap: var(--space-4);
+    }
+
+    @media (min-width: 768px) {
+      .product-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: var(--space-6);
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .product-grid {
+        grid-template-columns: repeat(4, 1fr);
+      }
+    }
+
+    /* Why Osaara */
+    .features-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: var(--space-8);
+    }
+
+    @media (min-width: 768px) {
+      .features-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .features-grid {
+        grid-template-columns: repeat(4, 1fr);
+      }
+    }
+
+    .feature-card {
+      text-align: center;
+      padding: var(--space-6);
+      background: var(--color-bg-ivory);
+      border-radius: var(--radius-md);
+      border: 1px solid var(--color-border);
+    }
+
+    .feature-icon {
+      font-size: 2rem;
+      color: var(--color-primary);
+      margin-bottom: var(--space-4);
+    }
+
+    .feature-card h3 {
+      font-size: var(--text-md);
+      margin-bottom: var(--space-2);
+    }
+
+    .feature-card p {
+      font-size: var(--text-sm);
+      color: var(--color-text-muted);
+      margin-bottom: 0;
+    }
+
+    /* Story Section */
+    .story-section {
+      background-color: var(--color-primary-dark);
+      color: var(--color-text-light);
+    }
+
+    .story-section h2 {
+      color: var(--color-accent-gold);
+    }
+
+    .story-section p {
+      color: rgba(255, 255, 255, 0.8);
+    }
+
+    .trust-section {
+      background-color: var(--color-bg-light);
+      text-align: center;
+      border-top: 1px solid var(--color-border);
+    }
+
+    .trust-logos {
+      display: flex;
+      justify-content: center;
+      gap: var(--space-8);
+      flex-wrap: wrap;
+      margin-top: var(--space-6);
+    }
+
+    .trust-logo-box {
+      border: 1px solid var(--color-border-dark);
+      padding: var(--space-4) var(--space-8);
+      border-radius: var(--radius-sm);
+      background: white;
+    }
+
+    .trust-logo-box span {
+      display: block;
+      font-weight: 600;
+      color: var(--color-primary-dark);
+    }
+
+    .trust-logo-box small {
+      color: var(--color-text-muted);
+    }
+
+    .brand-name {
+      font-family: var(--font-heading);
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--color-primary-dark);
+      letter-spacing: 0.05em;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container navbar">
+      <button class="mobile-menu-toggle" aria-label="Open Menu">
+        <!-- SVG Hamburger -->
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M3 12h18M3 6h18M3 18h18" />
+        </svg>
+      </button>
+
+      <a href="index.html" class="brand-logo">
+        <span class="brand-name">OSAARA</span>
+        <span class="brand-sub">NATURALS</span>
+      </a>
+
+      <nav class="nav-links">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="shop.html" class="nav-link">Shop</a>
+        <a href="about.html" class="nav-link">Our Story</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="cart.html" class="cart-toggle" aria-label="View Cart">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z" />
+            <line x1="3" y1="6" x2="21" y2="6" />
+            <path d="M16 10a4 4 0 0 1-8 0" />
+          </svg>
+          <span class="cart-count" style="display:none;">0</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu">
+    <div class="mobile-menu-header">
+      <div class="brand-logo">
+        <span class="brand-name">OSAARA</span>
+        <span class="brand-sub">NATURALS</span>
+      </div>
+      <button class="mobile-menu-close btn" aria-label="Close Menu">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M18 6L6 18M6 6l12 12" />
+        </svg>
+      </button>
+    </div>
+    <nav class="mobile-nav-links">
+      <a href="index.html" class="mobile-nav-link">Home</a>
+      <a href="shop.html" class="mobile-nav-link">Shop All</a>
+      <a href="shop.html?category=Health & Nutrition" class="mobile-nav-link">Health & Nutrition</a>
+      <a href="shop.html?category=Hair Care" class="mobile-nav-link">Hair Care</a>
+      <a href="shop.html?category=Face & Skin Care" class="mobile-nav-link">Face & Skin Care</a>
+      <a href="about.html" class="mobile-nav-link">Our Story</a>
+      <a href="contact.html" class="mobile-nav-link">Contact Us</a>
+    </nav>
+  </div>
+
+  <main>
+    <!-- Commerce Hero Section -->
+    <section class="hero-section"
+      style="padding-top: var(--space-12); padding-bottom: var(--space-12); background-color: var(--color-bg-ivory);">
+      <div class="container hero-container" style="align-items: center;">
+        <div class="hero-content">
+          <h1 class="hero-enter hero-enter-d1"
+            style="font-family: var(--font-heading); font-size: var(--text-4xl); margin-bottom: var(--space-4); color: var(--color-primary-dark);">
+            Natural Products.<br>Traditional Goodness.<br><span style="color: var(--color-accent-gold);">Everyday
+              Wellness.</span></h1>
+          <p class="text-muted hero-enter hero-enter-d2" style="margin-bottom: var(--space-6); font-size: var(--text-lg); max-width: 400px;">
+            Authentic traditional recipes formulated for modern living. Explore our range of premium natural nutrition
+            and care.</p>
+          <div class="hero-enter hero-enter-d3" style="display: flex; gap: var(--space-4);">
+            <a href="shop.html" class="btn btn-primary">Shop Products</a>
+            <a href="shop.html?category=Combos" class="btn btn-secondary">Explore Combos</a>
+          </div>
+        </div>
+        <div class="hero-image hero-enter-image hero-float"
+          style="background: none; aspect-ratio: 4/3; display: flex; align-items: center; justify-content: center;">
+          <img src="/assets/hero/hero.png" alt="Osaara Naturals Product Range"
+            style="width: 100%; height: 100%; object-fit: contain; border-radius: var(--radius-sm); border: 1px solid var(--color-border);">
+        </div>
+      </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="section-padding">
+      <div class="container">
+        <div class="section-header reveal-up">
+          <h2>Shop by Category</h2>
+          <p>Explore our range of natural products crafted for your daily wellness needs.</p>
+        </div>
+
+        <div class="category-grid reveal-stagger">
+          <a href="shop.html?category=Health & Nutrition" class="category-card">
+            <img src="/assets/categories/health-nutrition.jpg" alt="Health & Nutrition">
+            <div class="category-card-content">
+              <h3>Health & Nutrition</h3>
+              <p>Traditional health mixes</p>
+            </div>
+            <span class="arrow">→</span>
+          </a>
+          <a href="shop.html?category=Hair Care" class="category-card">
+            <img src="/assets/categories/hair-care.jpg" alt="Hair Care">
+            <div class="category-card-content">
+              <h3>Hair Care</h3>
+              <p>Herbal powders</p>
+            </div>
+            <span class="arrow">→</span>
+          </a>
+          <a href="shop.html?category=Face & Skin Care" class="category-card">
+            <img src="/assets/categories/face-care.jpg" alt="Face Care">
+            <div class="category-card-content">
+              <h3>Face & Skin Care</h3>
+              <p>Natural care routines</p>
+            </div>
+            <span class="arrow">→</span>
+          </a>
+          <a href="shop.html?category=Combos" class="category-card">
+            <img src="/assets/categories/combos.png" alt="Curated Combos">
+            <div class="category-card-content">
+              <h3>Curated Combos</h3>
+              <p>Perfect wellness bundles</p>
+            </div>
+            <span class="arrow">→</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Products Section -->
+    <section class="section-padding" style="background-color: var(--color-bg-ivory);">
+      <div class="container">
+        <div class="section-header reveal-up">
+          <h2>Featured Products</h2>
+          <p>Our most loved traditional preparations.</p>
+        </div>
+
+        <div class="product-grid" id="featured-products-container">
+          <!-- Populated by JS -->
+          <p class="text-center text-muted" style="grid-column: 1/-1;">Loading products...</p>
+        </div>
+
+        <div class="text-center" style="margin-top: var(--space-8);">
+          <a href="shop.html" class="btn btn-secondary">View All Products</a>
+        </div>
+      </div>
+    </section>
+    <!-- Current Offers / Combos -->
+
+    <section class="section-padding"
+      style="background-color: var(--color-bg-light); border-top: 1px solid var(--color-border); border-bottom: 1px solid var(--color-border);">
+      <div class="container">
+        <div class="hero-container"
+          style="align-items: center; background: white; border-radius: var(--radius-sm); border: 1px solid var(--color-border-dark); overflow: hidden; padding: 0;">
+          <div style="flex: 1; padding: var(--space-8);">
+            <span class="badge badge-accent" style="margin-bottom: var(--space-4);">Special Offer</span>
+            <h2
+              style="font-family: var(--font-heading); font-size: var(--text-3xl); margin-bottom: var(--space-2); color: var(--color-primary-dark);">
+              Everyday Wellness Combo</h2>
+            <p class="text-muted" style="margin-bottom: var(--space-6);">The perfect starting point for natural living.
+              Includes our signature Health Mix and Shikakai Powder.</p>
+            <div style="display: flex; align-items: baseline; gap: var(--space-3); margin-bottom: var(--space-6);">
+              <span style="font-size: var(--text-3xl); font-weight: 700;">₹599</span>
+              <span
+                style="text-decoration: line-through; color: var(--color-text-muted); font-size: var(--text-lg);">₹849</span>
+              <span style="color: var(--color-success); font-weight: 600; font-size: var(--text-sm);">29% OFF</span>
+            </div>
+            <a href="product.html?id=everyday-wellness-combo" class="btn btn-primary">Shop Combo</a>
+          </div>
+          <div
+            style="flex: 1; background: var(--color-bg-ivory); height: 100%; display: flex; align-items: center; justify-content: center; padding: var(--space-4);">
+            <img src="assets/categories/combos.png" alt="Everyday Wellness Combo" class="combo-product-img"
+              style="width: 100%; max-width: 400px; object-fit: contain;">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Osaara (Editorial) -->
+    <section class="section-padding">
+      <div class="container">
+        <div class="hero-container" style="align-items: center; gap: var(--space-12);">
+          <div style="flex: 1;" class="reveal-left">
+            <h2
+              style="font-family: var(--font-heading); font-size: var(--text-3xl); margin-bottom: var(--space-8); color: var(--color-primary-dark);">
+              The Osaara Difference</h2>
+
+            <div
+              style="margin-bottom: var(--space-6); border-left: 2px solid var(--color-accent-gold); padding-left: var(--space-4);">
+              <h3 style="font-size: var(--text-lg); margin-bottom: var(--space-1);">Traditional Recipes</h3>
+              <p class="text-muted" style="font-size: var(--text-sm);">Formulations strictly based on time-tested Indian
+                wellness traditions.</p>
+            </div>
+
+            <div
+              style="margin-bottom: var(--space-6); border-left: 2px solid var(--color-accent-gold); padding-left: var(--space-4);">
+              <h3 style="font-size: var(--text-lg); margin-bottom: var(--space-1);">Local & Natural Sourcing</h3>
+              <p class="text-muted" style="font-size: var(--text-sm);">We prioritize locally grown botanicals to ensure
+                maximum freshness.</p>
+            </div>
+
+            <div
+              style="margin-bottom: var(--space-6); border-left: 2px solid var(--color-accent-gold); padding-left: var(--space-4);">
+              <h3 style="font-size: var(--text-lg); margin-bottom: var(--space-1);">Authentic Preparation</h3>
+              <p class="text-muted" style="font-size: var(--text-sm);">Using traditional methods like stone grinding and
+                sun drying to maintain natural potency.</p>
+            </div>
+
+            <div
+              style="margin-bottom: var(--space-6); border-left: 2px solid var(--color-accent-gold); padding-left: var(--space-4);">
+              <h3 style="font-size: var(--text-lg); margin-bottom: var(--space-1);">Made for Modern Living</h3>
+              <p class="text-muted" style="font-size: var(--text-sm);">We package these traditional solutions in
+                convenient formats for everyday use.</p>
+            </div>
+          </div>
+          <div class="hero-image reveal-right" style="flex: 1;">
+            <img src="/assets/story/traditional-preparation.jpg" alt="Traditional Preparation"
+              style="width: 100%; border-radius: var(--radius-sm); border: 1px solid var(--color-border); aspect-ratio: 4/5; object-fit: cover;">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Story Section -->
+    <section class="section-padding story-section">
+      <div class="container">
+        <div class="hero-container">
+          <div class="reveal-left">
+            <h2>Rooted in Tradition</h2>
+            <p>Our journey begins with traditional recipes that have nurtured families for generations. We carefully
+              source our ingredients locally, honoring the earth that provides them.</p>
+            <p>Through traditional preparation methods—like sun-drying and stone-grinding—we preserve the natural
+              efficacy of every herb, grain, and root.</p>
+            <p>The result? Pure, authentic products packaged for your modern lifestyle, bringing the essence of rural
+              heritage directly to your home.</p>
+            <a href="about.html" class="btn btn-accent" style="margin-top: var(--space-4);">Read Our Story</a>
+          </div>
+          <div class="hero-image reveal-right">
+            <img src="/assets/story/locally-sourced.jpg" alt="Generational Heritage"
+              style="width: 100%; height: 100%; object-fit: cover;">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Trust Section -->
+    <section class="section-padding trust-section">
+      <div class="container">
+        <h2>Committed to Quality & Authenticity</h2>
+        <div class="trust-logos">
+          <div class="trust-logo-box">
+            <span>FSSAI Registered</span>
+            <small id="fssai-number">Loading...</small>
+          </div>
+          <div class="trust-logo-box">
+            <span>MSME Registered</span>
+            <small id="msme-number">Loading...</small>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="brand-logo">
+            <span class="brand-name">OSAARA</span>
+            <span class="brand-sub">NATURALS</span>
+          </div>
+          <p class="footer-tagline">Natural Products.<br>Traditional Goodness.<br>Everyday Wellness.</p>
+        </div>
+
+        <div class="footer-col">
+          <h3>Shop</h3>
+          <div class="footer-links">
+            <a href="shop.html" class="footer-link">All Products</a>
+            <a href="shop.html?category=Health & Nutrition" class="footer-link">Health & Nutrition</a>
+            <a href="shop.html?category=Hair Care" class="footer-link">Hair Care</a>
+            <a href="shop.html?category=Face & Skin Care" class="footer-link">Face & Skin Care</a>
+            <a href="shop.html?category=Combos" class="footer-link">Combos</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h3>Information</h3>
+          <div class="footer-links">
+            <a href="about.html" class="footer-link">Our Story</a>
+            <a href="contact.html" class="footer-link">Contact Us</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h3>Contact</h3>
+          <div class="footer-links">
+            <span class="footer-link" id="footer-phone">Loading...</span>
+            <a href="#" class="footer-link" id="footer-whatsapp">Loading...</a>
+            <a href="#" class="footer-link" id="footer-instagram">Loading...</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; <span id="current-year"></span> OSAARA NATURALS. All rights reserved.</p>
+        <div class="trust-badges">
+          <span id="footer-fssai"></span>
+          <span id="footer-msme"></span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/app.js"></script>
+  <script src="js/products.js"></script>
+  <script src="js/index.js"></script>
+  <script src="js/animations.js"></script>
+</body>
+
+</html>
